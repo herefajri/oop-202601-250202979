@@ -20,7 +20,7 @@ public class Aset implements DapatDipinjam {
     private StatusAset status = StatusAset.TERSEDIA;
     private Kondisi kondisi = Kondisi.BAIK;
 
-
+   
     public Aset(String kode, String nama) {
         if (kode == null || kode.trim().isEmpty()) {
             throw new IllegalArgumentException("Kode tidak boleh kosong!");
@@ -84,8 +84,9 @@ public class Aset implements DapatDipinjam {
     }
 
     /** TODO minggu 4: denda keterlambatan. Dioverride tiap subclass (aturan di docs/aturan-bisnis.md). */
+    // Denda = hari x multiplier jenis x tarif varian Anda. Ruang 1x, Laptop 2x, AlatLab 4x.
+    
     public long hitungDenda(int hariTerlambat) {
         throw new UnsupportedOperationException("TODO minggu 4");
     }
 }
-

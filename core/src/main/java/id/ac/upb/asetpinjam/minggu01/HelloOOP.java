@@ -1,6 +1,6 @@
 package id.ac.upb.asetpinjam.minggu01;
 
-import id.ac.upb.asetpinjam.config.Varian;
+import id.ac.upb.asetpinjam.config.Varian; 
 
 /** Minggu 1, gaya OOP: data dan perilaku dibungkus dalam sebuah class. */
 public class HelloOOP {
