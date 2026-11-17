@@ -39,3 +39,10 @@ Tambahkan di sini keputusan lain yang Anda ambil: rumus denda progresif, perubah
     - Maka Denda Progresif = 12000 * (1 + 0,1) => (12000 * ( 1 + 0.1 * 1)) => 13.200 (bertambah 10%.).
 Dengan demikian, berdampak ke kode dan juga output. 
 - Tes yang membuktikan: Minggu05AbstraksiTest.java
+
+## A-03: Batas waktu bentrok
+- Pertanyaan: 09:00-11:00 dan 11:00-13:00 pada aset yang sama bentrok atau tidak?
+- Keputusan: Saya memilih tidak bentrok.
+- Alasan: Saya menggunakan sistem demikian sebagai antisipasi bilamana `kuotaLaptop` dengan id yang sama dipinjam dalam waktu bersamaan, dan ini akan menyebabkan masalah bilamana ada 2 orang yang ingin meminjam aset yang sama di waktu yang sama. Saya juga memilih waktu selesai sebagai batas akhir penggunaan, dan bukan termasuk penggunaan, misalnya close laptop. Risiko seperti tidak adanya jeda bisa dimitigasi dengan peminjam menyelesaikan sebelum batas. 
+- Dampak ke kode: JadwalPeminjaman.bentrok(); baru.getMulai().isBefore(lama.getSelesai()) dan lama.getMulai().isBefore(baru.getSelesai()).
+- Tes yang membuktikan: BatasBentrokTest.selesaiSamaDenganMulai
